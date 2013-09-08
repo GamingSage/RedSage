@@ -1,0 +1,7 @@
+file(GLOB_RECURSE RSMLIB_SRC
+    "*.h"
+    "*.cpp"
+)
+
+add_library(maplib STATIC ${RSMLIB_SRC})
+SET_TARGET_PROPERTIES(maplib PROPERTIES LINKER_LANGUAGE CXX)

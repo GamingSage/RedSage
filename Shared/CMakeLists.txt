@@ -1,0 +1,7 @@
+file(GLOB_RECURSE SHARED_SRC
+    "*.h"
+    "*.cpp"
+)
+
+add_library(shared STATIC ${SHARED_SRC})
+SET_TARGET_PROPERTIES(shared PROPERTIES LINKER_LANGUAGE CXX)
