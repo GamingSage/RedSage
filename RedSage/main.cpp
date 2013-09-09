@@ -1,8 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "GL\glew.h"
-#include "GL\freeglut.h"
+#include "OpenGL.h"
 #include "Common.h"
 
 #define WINDOW_TITLE_PREFIX "Chapter 1"

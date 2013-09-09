@@ -1,11 +1,12 @@
-file(GLOB_RECURSE REDSAGE_SRC
+file(GLOB REDSAGE_SRC
     "*.h"
     "*.cpp"
 )
 
 add_executable(RedSage ${REDSAGE_SRC})
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/GL)
 include_directories(${CMAKE_SOURCE_DIR}/maplib)
 include_directories(${CMAKE_SOURCE_DIR}/Shared)
+include_directories(${CMAKE_SOURCE_DIR}/OpenGL/include)
+target_link_libraries(RedSage ${CMAKE_SOURCE_DIR}/Shared/OpenGL/lib/freeglut.lib)
 
-TARGET_LINK_LIBRARIES(RedSage ${CMAKE_CURRENT_SOURCE_DIR}/lib/freeglut.lib)
+set(OpenGL_DLL ${CMAKE_SOURCE_DIR}/OpenGL/bin/freeglut.dll)

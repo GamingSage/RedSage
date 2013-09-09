@@ -7,4 +7,7 @@
 #include <map>
 #include <string>
 
+#define ERRORCODE int
+#define PRINT(STR) cout << STR << endl; 
+
 #endif
