@@ -1,0 +1,4 @@
+file(GLOB_RECURSE NETWORK_SRC "*.h" "*.cpp")
+
+add_library(network ${NETWORK_SRC})
+SET_TARGET_PROPERTIES(network PROPERTIES LINKER_LANGUAGE CXX)

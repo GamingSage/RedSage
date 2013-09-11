@@ -1,5 +1,5 @@
 
-file(GLOB_RECURSE SHARED_SRC
+file(GLOB SHARED_SRC
     "*.h"
     "*.cpp"
 )
@@ -13,9 +13,22 @@ OpenGL/include/glew.h
 OpenGL/include/glxew.h
 OpenGL/include/wglew.h)
 
-add_library(shared STATIC ${SHARED_SRC} )
+add_executable(shared ${SHARED_SRC} )
 
 source_group("OpenGL" FILES ${GL_HEADERS})
+
+set(GLM_DIR ${CMAKE_SOURCE_DIR}/glm)
+set(GLI_DIR ${CMAKE_SOURCE_DIR}/gli)
+
+include_directories(
+${GLM_DIR}
+${GLI_DIR}
+${GLM_DIR}/core
+${GLM_DIR}/gtc
+${GLM_DIR}/gtx
+${GLM_DIR}/virtrev
+${GLI_DIR}/core
+${GLI_DIR}/gtx)
 
 target_link_libraries(shared ${CMAKE_SOURCE_DIR}/OpenGL/lib/freeglut.lib)
 SET_TARGET_PROPERTIES(shared PROPERTIES LINKER_LANGUAGE CXX)

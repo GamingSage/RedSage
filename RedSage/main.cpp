@@ -1,10 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "OpenGL.h"
+#include "graphics.h"
 #include "Common.h"
 
-#define WINDOW_TITLE_PREFIX "Chapter 1"
+#define WINDOW_TITLE_PREFIX "RedSage"
  
 int CurrentWidth = 800,
     CurrentHeight = 600,

@@ -1,0 +1,4 @@
+file(GLOB_RECURSE INPUT_SRC "*.h" "*.cpp")
+
+add_library(input ${INPUT_SRC})
+SET_TARGET_PROPERTIES(input PROPERTIES LINKER_LANGUAGE CXX)

@@ -3,11 +3,11 @@
 
 #include "ErrorCodes.h"
 #include <stdlib.h>
+#include <iostream>
 #include <vector>
 #include <map>
 #include <string>
 
-#define ERRORCODE int
-#define PRINT(STR) cout << STR << endl; 
+#define PRINTLN(STR) std::cout << STR << std::endl; 
 
 #endif
